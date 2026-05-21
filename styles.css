@@ -136,7 +136,7 @@ body {
     animation: optAppear 1s ease-out 1s backwards;
 }
 
-.option button {
+.option a {
     border-radius: 10px;
     font-size: 20px;
     border: none;
@@ -146,22 +146,23 @@ body {
     margin: 10px;
     width: fit-content;
     transition: background-color 0.2s ease;
+    text-decoration: none;
 }
 
-.build-option button {
+.build-option a {
     background-color: var(--brandMain);
     box-shadow: 2px 2px 10px 2px var(--brandMain);
 }
 
-.build-option button:hover {
+.build-option a:hover {
     background-color: var(--brandDark);
 }
 
-.play-option button {
+.play-option a {
     background-color: var(--accentMain);
     box-shadow: 2px 2px 10px 2px var(--accentMain);
 }
 
-.play-option button:hover {
+.play-option a:hover {
     background-color: var(--accentDark);
 }
