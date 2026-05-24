@@ -3,6 +3,7 @@
     <head>
         <title>Jetcore</title>
         <link rel="stylesheet" href="../styles.css">
+        <script src="https://unpkg.com/three@0.168/build/three.min.js"></script>
     </head>
     <body>
         <div class="topbar">
@@ -39,6 +40,26 @@
                 </svg>
                 <span>Rotate</span>
             </button>
+            <hr>
+            <button onclick="newPart()">
+                <svg viewBox="0 0 12 6">
+                    <path d="M 0 0 L 10 0 L 10 5 L 0 5 L 0 1 L 1 1 L 1 4 L 9 4 L 9 1 L 0 1 M 0 5 L 2 6 L 2 6 L 3 6 L 11.5 6 L 11.5 1 L 11 1 L 11 5.5 L 10 5 L 9 5 L 10 5.5 L 2 5.5 L 1 5 M 10 0 L 11 1 L 11.5 1 L 10.5 0" fill="black"/>
+                </svg>
+                <span>New Part</span>
+            </button>
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+        <div class="main-band">
+            <div class="properties">
+                <span>Properties</span>
+            </div>
+            <div style="flex: 1;" class="properties">
+                <span>Properties</span>
+            </div>
+            <canvas id="mainViewport"></canvas>
         </div>
         <script src="script.js"></script>
     </body>

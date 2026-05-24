@@ -1,5 +1,7 @@
 let project = {
-    name: "Untitled"
+    name: "Untitled",
+    ROOT_ID: crypto.randomUUID(),
+    objects: {}
 }
 
 const projectName = document.getElementById("projectname");
@@ -27,3 +29,32 @@ projectName.addEventListener("keydown", (ev) => {
 projectName.addEventListener("blur", () => {
     finishRename();
 });
+
+function newPart() {
+    const id = crypto.randomUUID();
+    project.objects[id] = {
+        UUID: id,
+        name: "Part",
+        parent: project.ROOT_ID
+    }
+}
+
+const mainCanvas = document.getElementById("mainViewport");
+const renderer = new THREE.WebGLRenderer({ canvas: mainCanvas });
+
+const camera = new THREE.PerspectiveCamera(
+    75,
+    mainCanvas.clientWidth / mainCanvas.clientHeight,
+    0.1,
+    1000
+);
+
+function onWindowResized() {
+    const w = mainCanvas.clientWidth;
+    const h = mainCanvas.clientHeight;
+    renderer.setSize(w, h);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+}
+
+window.addEventListener("resize", onWindowResized);
