@@ -9,12 +9,42 @@
     --lowlyButton: #222;
 }
 
-* {
-    font-family: system-ui;
-}
-
 body {
     background-color: black;
+    margin: 0;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --lowlyButton: #ddd;
+        --text: black;
+    }
+
+    body {
+        background-color: white;
+    }
+}
+
+html[theme="dark"] {
+    --lowlyButton: #222;
+    --text: white;
+}
+
+html[theme="light"] {
+    --lowlyButton: #ddd;
+    --text: black;
+}
+
+html[theme="dark"] body {
+    background-color: black;
+}
+
+html[theme="light"] body {
+    background-color: white;
+}
+
+* {
+    font-family: system-ui;
 }
 
 @keyframes appear {
@@ -165,4 +195,87 @@ body {
 
 .play-option a:hover {
     background-color: var(--accentDark);
+}
+
+.topbar {
+    width: 100%;
+    background-color: var(--accentMain);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    align-items: center;
+}
+
+.topbar h2 {
+    margin: 5px;
+    color: white;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.topbar a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--accentDark);
+    padding: 0 10px;
+    height: 100%;
+    transition: background-color 0.2s;
+}
+
+.topbar a:hover {
+    background-color: var(--brandMain);
+}
+
+.topbar a:active {
+    background-color: var(--accentLight);
+}
+
+.topbar button {
+    background-color: var(--accentDark);
+    padding: 0 10px;
+    border: none;
+    height: 100%;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.topbar button:hover {
+    background-color: var(--brandMain);
+}
+
+.topbar button:active {
+    background-color: var(--accentLight)
+}
+
+.topbar button svg {
+    width: 20px;
+    height: 100%;
+}
+
+.toolbar {
+    height: 100px;
+    width: 100%;
+    box-shadow: 0 5px 10px var(--lowlyButton);
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    gap: 5px;
+    box-sizing: border-box;
+}
+
+.toolbar button {
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    width: 60px;
+}
+
+.toolbar button:hover {
+    background-color: var(--lowlyButton);
+}
+
+.toolbar button:active {
+    background-color: var(--brandMain);
 }

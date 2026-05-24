@@ -2,8 +2,44 @@
 <html>
     <head>
         <title>Jetcore</title>
+        <link rel="stylesheet" href="../styles.css">
     </head>
     <body>
-        
+        <div class="topbar">
+            <a href="../index.html">...</a>
+            <h2 id="projectname">Jetcore - Untitled Project</h2>
+            <button onclick="renameProject()">
+                <svg viewBox="0 0 10 10">
+                    <path d="M 0 10 L 0 8 L 8 0 L 10 2 L 2 10 M 9 1" fill="white"/>
+                </svg>
+            </button>
+        </div>
+        <div class="toolbar">
+            <button onclick="selectTool()">
+                <svg viewBox="0 0 7 8">
+                    <path d="M 0 0 L 0 8 L 3 5 L 7 5" fill="black"/>
+                </svg>
+                <span>Select</span>
+            </button>
+            <button>
+                <svg viewBox="0 0 18 18">
+                    <path d="M 8 8 L 8 2 L 7 2 L 9 0 L 11 2 L 10 2 L 10 8 L 16 8 L 16 7 L 18 9 L 16 11 L 16 10 L 10 10 L 10 16 L 11 16 L 9 18 L 7 16 L 8 16 L 8 10 L 2 10 L 2 11 L 0 9 L 2 7 L 2 8" fill="black"/>
+                </svg>
+                <span>Move</span>
+            </button>
+            <button>
+                <svg viewBox="0 0 9 9">
+                    <path d="M 0 8 Q 0 7 1 7 Q 2 7 2 8 Q 2 9 1 9 Q 0 9 0 8 M 1 6 L 3 8 L 8 3 L 9 4 L 9 0 L 5 0 L 6 1" fill="black"/>
+                </svg>
+                <span>Scale</span>
+            </button>
+            <button>
+                <svg viewBox="0 0 11.5 12">
+                    <path d="M 4.75 6 Q 4.75 5 5.7 5 Q 6.65 5 6.65 6 Q 6.65 7 5.7 7 Q 4.75 7 4.75 6 M 0 7 Q 0 1 6.65 1 L 6.65 2 Q 0.95 2 0.95 7 M 6.65 3 L 6.65 0 L 7.6 1.5 M 11.4 5 Q 11.4 11 4.75 11 L 4.75 10 Q 10.45 10 10.45 5 M 4.75 9 L 4.75 12 L 3.8 10.5" fill="black"/>
+                </svg>
+                <span>Rotate</span>
+            </button>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>
