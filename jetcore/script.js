@@ -58,3 +58,5 @@ function onWindowResized() {
 }
 
 window.addEventListener("resize", onWindowResized);
+
+const scene = new THREE.Scene();
