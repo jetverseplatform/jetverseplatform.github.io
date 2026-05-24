@@ -60,3 +60,18 @@ function onWindowResized() {
 window.addEventListener("resize", onWindowResized);
 
 const scene = new THREE.Scene();
+
+const testCube = THREE.Mesh(
+    new THREE.BoxGeometry(2, 1, 4),
+    new THREE.MeshBasicMaterial({color: 0x808080})
+);
+
+testCube.position.set(0, 0.5, 0);
+
+scene.add(testCube);
+
+function loop() {
+    renderer.render(scene, camera);
+    requestAnimationFrame(loop);
+}
+loop();
