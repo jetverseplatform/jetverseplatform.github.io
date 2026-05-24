@@ -294,6 +294,7 @@ html[theme="light"] body {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    min-height: 0;
 }
 
 .main-band .properties {
